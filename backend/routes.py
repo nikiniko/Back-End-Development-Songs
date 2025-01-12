@@ -37,7 +37,7 @@ else:
 print(f"connecting to url: {url}")
 
 try:
-    client = MongoClient("localhost", 27017)
+    client = MongoClient(url)
 except OperationFailure as e:
     app.logger.error(f"Authentication error: {str(e)}")
 
